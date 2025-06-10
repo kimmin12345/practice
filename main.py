@@ -1,6 +1,13 @@
 import streamlit as st
 import random
+name = st.text_input("이름을 입력하세요:")
 
+# 조건문 사용
+if name:
+    if name == "홍길동":
+        st.success("✅ 반갑습니다, 홍길동님!")
+    else:
+        st.warning("❗ 누구세요?")
 st.set_page_config(page_title="✊✋✌️ 가위바위보 게임", page_icon="🎮")
 
 choices = ['✊ 가위', '✋ 바위', '✌️ 보']
